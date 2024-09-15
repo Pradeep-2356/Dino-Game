@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #282c34;
+    color: white;
+    overflow: hidden;
+}
+.authForm {
+    display: none;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    width: 300px;
+    background-color: #20232a;
+    text-align: center;
+    border-radius: 10px;
+}
+.authForm input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #282c34;
+}
+.authForm button {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.authForm p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+.authForm span {
+    color: #61dafb;
+    cursor: pointer;
+}
+#authContainer {
+    text-align: center;
+    display: none;
+}
+.gameContainer {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.dino {
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle {
+    width: 166px;
+    height: 113px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver {
+    width: 60%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ff6b6b;
+    border: 3px solid #ff4757;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    font-size: 3rem;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px 40px;
+    visibility: hidden;
+    opacity: 0; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+.gameOver.show {
+    visibility: visible;
+    opacity: 1; 
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+
+
+#scoreCont {
+    background-color: darkblue;
+    width: 120px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    border: 3px solid #0deb2c;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+#logoutBtn {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e72727;
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 422px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino-Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="authContainer">
+        <div id="registerContainer" class="authForm">
+            <h2>Register</h2>
+            <input type="text" id="regUsername" placeholder="Username">
+            <input type="password" id="regPassword" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <span onclick="showLogin()">Login here</span></p>
+        </div>
+        <div id="loginContainer" class="authForm">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <span onclick="showRegister()">Register here</span></p>
+        </div>
+    </div>
+    <div class="gameContainer">
+        <div class="gameOver">Welcome to iDragon Adventures</div>
+        <div class="dino"></div>
+        <div id="scoreCont">Your Score: 0</div>
+        <div class="obstacle obstacleAni"></div>
+    </div>
+    <button id="logoutBtn" onclick="logout()">Logout</button>
+</body>
+</html>
